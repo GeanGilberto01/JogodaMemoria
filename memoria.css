@@ -1,0 +1,36 @@
+body{
+    background-color: lightgrey;
+}
+    
+h1{
+    max-width: 685px;
+    color: darkblue;
+    margin-inline-start: 2.0cm;
+    border-radius: 10px;
+}
+
+#memoria{
+    max-width: 50rem;
+}
+
+#memoria #timer{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 36pt;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgb(255, 0, 0);
+    color: black;
+    border-radius: 10px;
+}
+
+#memoria img{
+    margin-bottom: 20px;
+    border: thin solid black;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+#memoria #rodape{
+    text-align: center;
+}
