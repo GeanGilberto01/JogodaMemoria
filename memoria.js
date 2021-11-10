@@ -8,7 +8,7 @@ for (let i = 1; i <= 12; i++) {
 let fundo = 'imagens/fundo.jpg';
 
 //Vetor de Cartas
-cartas = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12];
+let cartas = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12];
 
 //Variaveis do Jogo
 let cliquesTravados = false;
@@ -86,6 +86,9 @@ const trataCliqueImagem = (e) => {
     } else {
         if (valor == valorCartaVirada) {
             pontos++;
+            setTimeout(() => {
+                alert("Parabéns!");
+            }, 500);
         } else {
             cliquesTravados = true;
             const p0 = posicaoCartaVirada;
@@ -96,7 +99,8 @@ const trataCliqueImagem = (e) => {
                 img.src = fundo;
                 img.onclick = trataCliqueImagem;
                 cliquesTravados = false;
-            }, 1500);
+                alert("Tente novamente!");
+            }, 500);
         }
         temCartaVirada = false;
         posicaoCartaVirada = -1;
@@ -106,6 +110,7 @@ const trataCliqueImagem = (e) => {
         document.querySelector('#btSorteio').disabled = false;
         document.querySelector('#timer').style.backgroundColor = 'green';
         timerJogo.stop();
+        alert("Você ganhou!");
     }
 }
 
